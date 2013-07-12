@@ -1,0 +1,14 @@
+{
+    "copyFiles": [
+        "InMobiPlugin.java"
+    ],
+    "libraries": [
+    ],
+    "jars": [
+        "InMobiAdNetwork-3.7.0-SNAPSHOT.jar",
+        "InMobiAnalytics-0.5-SNAPSHOT.jar",
+        "InMobiCommons-3.8.0-SNAPSHOT.jar"
+    ],
+    "injectionXML": "manifest.xml",
+	"injectionXSL": "manifest.xsl"
+}
