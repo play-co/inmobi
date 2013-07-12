@@ -1,0 +1,15 @@
+{
+	"code": [
+		"InMobiAnalytics.h",
+		"IMAnalyticsActionResponse.h",
+		"IMAnalyticsBannerView.h",
+		"IMAnalyticsDemogInfo.h",
+		"IMAnalyticsInterstitial.h",
+		"InMobiPlugin.mm"
+	],
+	"frameworks": [
+		"libInMobiAnalytics-1.2.0.a",
+		"libInMobiCommons-3.8.0.a",
+		"libInMobiAdNetwork-3.7.0.a"
+	]
+}
