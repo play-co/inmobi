@@ -1,8 +1,6 @@
 # Game Closure DevKit Plugin: InMobi
 
-InMobi support is still in progress.  In the meantime you can use this plugin as
-a starting point in case you want to integrate it yourself.  Right now only the
-Android platform is working and only for analytics it does not show advertising.
+This plugin allows you to collect analytics using the [InMobi](http://www.inmobi.com/) toolkit. Both iOS and Android targets are supported.
 
 ## Usage
 
@@ -16,7 +14,7 @@ Include it in the `manifest.json` file under the "addons" section for your game:
 ],
 ~~~
 
-Under the Android section, you can configure the Flurry plugin:
+Under the Android section, you can configure the InMobi plugin:
 
 ~~~
 	"android": {
@@ -26,6 +24,21 @@ Under the Android section, you can configure the Flurry plugin:
 			"48": "resources/icons/android48.png",
 			"72": "resources/icons/android72.png",
 			"96": "resources/icons/android96.png"
+		},
+		"inMobiKey": "123487983",
+	}
+~~~
+
+~~~
+	"ios": {
+		"bundleID": "mmp",
+		"appleID": "568975017",
+		"version": "1.0.3",
+		"icons": {
+			"57": "resources/images/promo/icon57.png",
+			"72": "resources/images/promo/icon72.png",
+			"114": "resources/images/promo/icon114.png",
+			"144": "resources/images/promo/icon144.png"
 		},
 		"inMobiKey": "123487983",
 	}
@@ -88,7 +101,7 @@ You can use these logs to implement tracking in your game.
 
 ### iOS
 
-No iOS implementation at this time.
+To use this plugin with iOS, you'll need to set up an InMobi account and add your InMobi key to the manifest (see Usage section, above).
 
 ### Android
 

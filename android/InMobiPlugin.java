@@ -5,7 +5,10 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import com.tealeaf.logger;
 import com.tealeaf.TeaLeaf;
-import com.inmobi.androidsdk.IMBrowserActivity;
+
+import com.inmobi.commons.InMobi;
+import com.inmobi.analytics.InMobiAnalytics;
+
 import com.tealeaf.plugin.IPlugin;
 import java.io.*;
 import org.json.JSONArray;
@@ -49,7 +52,7 @@ public class InMobiPlugin implements IPlugin {
         } catch (Exception e) {
             android.util.Log.d("EXCEPTION", "" + e.getMessage());
         }
-        InMobi.initialize(inMobiKey);
+        InMobi.initialize(ctx, inMobiKey);
         InMobiAnalytics.startSession(ctx);
     }
 

@@ -5,14 +5,6 @@
 
 	<xsl:output indent="yes" />
 
-	<xsl:template match="application">
-		<activity
-			android:name="com.inmobi.androidsdk.IMBrowserActivity"
-			android:configChanges="keyboardHidden|orientation|keyboard|screenSize|uiMode|smallestScreenSize"
-			>
-		</activity>
-	</xsl:template>
-
 	<xsl:template match="meta-data[@android:name='INMOBI_KEY']">
 		<meta-data android:name="INMOBI_KEY" android:value="{$inMobiKey}"/>
 	</xsl:template>
