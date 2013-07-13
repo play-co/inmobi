@@ -47,7 +47,7 @@ public class InMobiPlugin implements IPlugin {
         try {
             Bundle meta = manager.getApplicationInfo(activity.getPackageName(), PackageManager.GET_META_DATA).metaData;
             if (meta != null) {
-                inMobiKey = meta.getString("INMOBI_KEY");
+                inMobiKey = meta.get("INMOBI_KEY").toString();
             }
         } catch (Exception e) {
             android.util.Log.d("EXCEPTION", "" + e.getMessage());
