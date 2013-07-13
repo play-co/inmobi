@@ -25,7 +25,7 @@ Under the Android section, you can configure the InMobi plugin:
 			"72": "resources/icons/android72.png",
 			"96": "resources/icons/android96.png"
 		},
-		"inMobiKey": "123487983",
+		"inMobiKey": "4028cba631d63df10131e1d4650600cd",
 	}
 ~~~
 
@@ -40,7 +40,7 @@ Under the Android section, you can configure the InMobi plugin:
 			"114": "resources/images/promo/icon114.png",
 			"144": "resources/images/promo/icon144.png"
 		},
-		"inMobiKey": "123487983",
+		"inMobiKey": "4028cba631d63df10131e1d4650600cd",
 	}
 ~~~
 
