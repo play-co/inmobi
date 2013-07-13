@@ -1,3 +1,4 @@
+#import "InMobi.h"
 #import "InMobiAnalytics.h"
 #import "InMobiPlugin.h"
 
