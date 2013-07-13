@@ -25,7 +25,7 @@ Under the Android section, you can configure the InMobi plugin:
 			"72": "resources/icons/android72.png",
 			"96": "resources/icons/android96.png"
 		},
-		"inMobiKey": "123487983",
+		"inMobiKey": "123487983"
 	}
 ~~~
 
@@ -40,11 +40,11 @@ Under the Android section, you can configure the InMobi plugin:
 			"114": "resources/images/promo/icon114.png",
 			"144": "resources/images/promo/icon144.png"
 		},
-		"inMobiKey": "123487983",
+		"inMobiKey": "123487983"
 	}
 ~~~
 
-To use InMobi logging in your game, import the plugin at the top of Application.js, like so:
+To use InMobi logging in your game, import the plugin at the top of JS files where you are using it:
 
 ~~~
 import plugins.inmobi.inmobi as inmobi;
@@ -71,38 +71,14 @@ basil debug native-android --clean --open
 Then watch logcat:
 
 ~~~
-adb logcat | grep inmobi
+adb logcat | grep -i inmobi
 ~~~
 
 If InMobi is hooked up properly, you'll see something like this:
 
 ~~~
-D/JS      ( 4673): LOG plugins.inmobi.inmobi {inmobi} track:  AppStart [object Object]
-D/JS      ( 4673): LOG plugins.inmobi.inmobi {inmobi} track:  UpgradePriceGroup [object Object]
-E/JS      ( 4673): {inmobi} {android} track - success: AppStart 
-E/JS      ( 4673): {inmobi} {android} track - success: UpgradePriceGroup
 ~~~
 
 (You'll see your own logs instead of AppStart and UpgradePriceGroup)
 
 You can conclusively confirm events are going through on the InMobi website.
-
-## Platform-specific notes
-
-### Browsers
-
-Nothing actually gets sent to InMobi in browsers, but you'll still see logs that look like this:
-
-~~~
-D/JS      ( 4673): LOG plugins.inmobi.inmobi {inmobi} track:  AppStart [object Object]
-~~~
-
-You can use these logs to implement tracking in your game.
-
-### iOS
-
-To use this plugin with iOS, you'll need to set up an InMobi account and add your InMobi key to the manifest (see Usage section, above).
-
-### Android
-
-To use this plugin with Android, you'll need to set up an InMobi account and add your InMobi key to the manifest (see Usage section, above).
