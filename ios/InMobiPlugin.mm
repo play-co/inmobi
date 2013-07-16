@@ -1,6 +1,7 @@
 #import "InMobi.h"
 #import "InMobiAnalytics.h"
 #import "InMobiPlugin.h"
+#import "JSONKit.h"
 
 @implementation InMobiPlugin
 
@@ -25,12 +26,18 @@
 		NSDictionary *ios = [manifest valueForKey:@"ios"];
 		NSString *trackingId = [ios valueForKey:@"inMobiKey"];
 		[InMobi initialize:trackingId];
+
 		[InMobiAnalytics startSession];
+
 		NSLog(@"{inMobi} Initialized with manifest inMobiKey: '%@'", trackingId);
 	}
 	@catch (NSException *exception) {
 		NSLog(@"{inMobi} Failure to get ios:inMobiKey key from manifest file: %@", exception);
 	}
+}
+
+- (void) applicationWillTerminate:(UIApplication *)app {
+	[InMobiAnalytics endSession];
 }
 
 - (void) track:(NSDictionary *)jsonObject {
