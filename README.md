@@ -74,11 +74,4 @@ Then watch logcat:
 adb logcat | grep -i inmobi
 ~~~
 
-If InMobi is hooked up properly, you'll see something like this:
-
-~~~
-~~~
-
-(You'll see your own logs instead of AppStart and UpgradePriceGroup)
-
 You can conclusively confirm events are going through on the InMobi website.
