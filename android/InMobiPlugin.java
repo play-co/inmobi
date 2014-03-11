@@ -52,8 +52,8 @@ public class InMobiPlugin implements IPlugin {
         } catch (Exception e) {
             android.util.Log.d("EXCEPTION", "" + e.getMessage());
         }
-        InMobi.initialize(ctx, inMobiKey);
-        InMobiAnalytics.startSession(ctx);
+        InMobi.initialize(activity, inMobiKey);
+		//InMobiAnalytics.startSessionManually();
     }
 
     public void onResume() {
@@ -84,7 +84,7 @@ public class InMobiPlugin implements IPlugin {
                     params.put(key, value);
                 }
             }
-            InMobiAnalytics.trackCustomEvent(eventName, params);
+            InMobiAnalytics.tagEvent(eventName, params);
             logger.log("{inmobi} track - success: " + eventName);
         } catch (JSONException e) {
             logger.log("{inmobi} track - failure: " + eventName + " - " + e.getMessage());
@@ -99,7 +99,7 @@ public class InMobiPlugin implements IPlugin {
     }
 
     public void onDestroy() {
-        InMobiAnalytics.endSession();
+		//InMobiAnalytics.endSessionManually();
     }
 
     public void onNewIntent(Intent intent) {
@@ -121,3 +121,4 @@ public class InMobiPlugin implements IPlugin {
     public void onBackPressed() {
     }
 }
+

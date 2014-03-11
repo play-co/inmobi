@@ -5,9 +5,7 @@
     "libraries": [
     ],
     "jars": [
-        "InMobiAdNetwork.jar",
-        "InMobiAnalytics.jar",
-        "InMobiCommons.jar"
+        "InMobi-4.1.1.jar"
     ],
     "injectionXML": "manifest.xml",
 	"injectionXSL": "manifest.xsl"
